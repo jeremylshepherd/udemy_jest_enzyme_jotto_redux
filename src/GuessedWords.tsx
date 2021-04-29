@@ -30,8 +30,8 @@ function GuessedWords(props: Props) {
       contents = (
         <div data-jest="guessed-words">
           <h3>Guessed Words</h3>
-          <table>
-            <thead>
+          <table className="table table-sm table-striped">
+            <thead className="thead-light">
               <tr>
                 <th>Guess</th>
                 <th>Matching Letters</th>

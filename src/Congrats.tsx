@@ -9,7 +9,7 @@ import React from 'react';
 
 export default function Congrats({ success } : { success : boolean }) : JSX.Element {
     return (
-        <div data-jest="component-congrats">
+        <div className="alert alert-success" data-jest="component-congrats">
             {success ?
                 <span data-jest="congrats-message">
                     Congratulations! You guessed the word!
@@ -18,4 +18,4 @@ export default function Congrats({ success } : { success : boolean }) : JSX.Elem
         }
         </div>
     );
-}
+}           
