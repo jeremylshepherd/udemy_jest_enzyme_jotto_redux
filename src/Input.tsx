@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 interface Props {
     secretWord: string
 }
 
 function Input(props: Props) {
-    const [ currentGuess, setCurrentGuess ] = React.useState('');
+    const [ currentGuess, setCurrentGuess ] = useState<string>('');
     const { secretWord } = props;
 
     return (

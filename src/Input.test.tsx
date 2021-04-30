@@ -5,6 +5,12 @@ import Input from './Input';
 
 const defaultProps : { secretWord :  string } = { secretWord: "party" };
 
+const mockSetCurrentGuess = jest.fn();
+jest.mock('react', () => ({
+    ...jest.requireActual('react'),
+    useState: (initialState : string) => [initialState, mockSetCurrentGuess]
+}));
+
 /**
  * Factory function to create a ShallowWrapper for the Input Component
  * @function setup
@@ -24,12 +30,10 @@ it('renders Input component', () => {
 
 describe("state controlled input field", () => {
     
-    let mockSetCurrentGuess : jest.Mock;
     let wrapper : ShallowWrapper;
     
-    beforeEach(() => {
-        mockSetCurrentGuess = jest.fn();
-        React.useState = jest.fn(() => ["", mockSetCurrentGuess]);
+    beforeEach(() => {        
+        // React.useState = jest.fn(() => ["", mockSetCurrentGuess]);        
         wrapper = setup();
     });
 
