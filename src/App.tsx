@@ -1,6 +1,7 @@
 import React from 'react';
 import Congrats from './Congrats';
 import GuessedWords from './GuessedWords';
+import Input from './Input';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
@@ -9,6 +10,7 @@ function App() {
     <div className="container">
       <h1>Jotto Guess-a-Word</h1>
       <Congrats success={true} />
+      <Input secretWord={'party'} />
       <GuessedWords guessedWords={[{ guessedWord: 'train', letterMatchCount: 3}]} />
     </div>
   );
