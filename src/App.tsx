@@ -10,7 +10,7 @@ function App() {
     <div className="container">
       <h1>Jotto Guess-a-Word</h1>
       <Congrats success={true} />
-      <Input secretWord={'party'} />
+      <Input secretWord={'party'} success={false}/>
       <GuessedWords guessedWords={[{ guessedWord: 'train', letterMatchCount: 3}]} />
     </div>
   );
