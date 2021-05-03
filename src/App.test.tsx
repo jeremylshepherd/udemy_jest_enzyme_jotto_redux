@@ -17,3 +17,4 @@ it('renders <App /> without crashing', () => {
   const appComponent = $findByAttr(wrapper, 'component-app');
   expect(appComponent.exists()).toBe(true);
 });
+
