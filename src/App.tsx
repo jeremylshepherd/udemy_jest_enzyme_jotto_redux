@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container">
+    <div data-jest="component-app" className="container">
       <h1>Jotto Guess-a-Word</h1>
       <Congrats success={true} />
       <Input secretWord={'party'} success={false}/>
